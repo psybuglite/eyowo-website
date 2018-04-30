@@ -1,0 +1,41 @@
+// 
+    // Icons
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+.prefix
+    margin-right:               6px
+    &.is-wider
+        margin-right:           15px
+
+.suffix
+    margin-left:                6px
+    &.is-wider
+        margin-left:            12px
+
+.bullet-checks
+    fill:                       $primarycolor
+
+.has-icon
+    display:                    flex!important
+    align-items:                center
+
+span[uk-icon="icon: sign-in"]
+    transform:                  translateX(-5px)
+
+.icon
+    color:                      inherit
+    &.cpc
+        @extend .prefix
+        width:                  $basefont
+
+.group-quick-about
+    .icon
+        margin-right:           12px
+        max-width:              32px
+        min-width:              32px
+        fill:                   $sweetgray

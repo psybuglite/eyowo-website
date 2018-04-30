@@ -1,0 +1,170 @@
+// 
+    // Trumps/Utilities
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+// Widths
+.width-100-pc
+    width:                      100%
+
+
+
+// Colors
+
+
+
+
+// Positioning
+.absolute-zero
+    position:                   absolute
+    top:                        0
+    right:                      0
+    bottom:                     0
+    left:                       0
+
+.pos-rel
+    position:                   relative
+
+
+
+// Display
+.d-blk
+    display:                    block
+    
+.d-flx
+    display:                    flex!important
+
+.al-i-c
+    align-items:                center
+
+.j-c-sb
+    justify-content:            space-between
+.j-c-fe
+    justify-content:            flex-end
+
+.clearfix::after 
+    content: ""
+    clear: both
+    display: table
+
+
+
+
+// Margins
+.m-0
+    margin:                     0
+
+.mt-0
+    margin-top:                 0
+.mt-1
+    margin-top:                 1rem
+.mt-1h
+    margin-top:                 1.5rem
+.mt-2
+    margin-top:                 2rem
+.mt-3
+    margin-top:                 3rem
+
+.mr-h
+    margin-top:                 0.5rem
+.mr-1
+    margin-right:               1rem
+
+.mb-0
+    margin-bottom:              0
+.mb-h
+    margin-bottom:              0.5rem
+.mb-1
+    margin-bottom:              1rem
+.mb-2
+    margin-bottom:              2rem
+
+
+
+// Paddings
+.pt-h
+    padding-top:                0.5rem
+.pt-1
+    padding-top:                1rem
+.pt-2
+    padding-top:                2rem 
+
+.pb-h
+    padding-bottom:             0.5rem
+.pb-1
+    padding-bottom:             1rem
+
+
+
+// Stacking Contexts
+.z-depth_highest
+    z-index:                    10
+
+
+
+// UI Kit Overrides
+.uk-badge
+    background-color:           $primarycolor
+    min-width:                  24px
+    height:                     24px
+    padding:                    9px 12px 8px
+    font-size:                  $nanofont
+    font-weight:                $normal
+    letter-spacing:             1px
+
+.uk-grid > *
+    padding-left:               $space
+
+.uk-slidenav
+    background-color:           $primarycolor
+    color:                      rgba( 255, 255, 255, 1 )
+    padding:                    20px 12px
+    margin:                     0!important
+    &:active, &:hover, &:focus
+        color:                  rgba( 255, 255, 255, 0.7 )
+
+
+
+// Media Query Utilities
+.show-smallup
+    display:                none
+    @media #{ $smallup }
+        display:            block
+
+.show-mediumup
+    display:                none
+    @media #{ $mediumup }
+        display:            block
+
+.hide-smallup
+    display:                block
+    @media #{ $smallup }
+        display:            none
+
+.hide-mediumup
+    display:                block
+    @media #{ $mediumup }
+        display:            none
+
+
+//this is the styling used to blur parts of the webpage
+.blurred
+    filter:                 blur(25px)
+
+// Screen Reader Text
+    // The .sr class ensure element is available in the DOM but only to screen readers. The whitespace: nowrap rule ensures accessible texts aren't smushed off screen.
+    // @link https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+.sr:not(:focus):not(:active)
+    position:                   absolute
+    width:                      1px
+    height:                     1px
+    padding:                    0
+    margin:                     -1px
+    border:                     0
+    clip-path:                  inset(100%)
+    overflow:                   hidden
+    white-space:                nowrap  

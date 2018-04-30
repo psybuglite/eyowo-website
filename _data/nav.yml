@@ -1,0 +1,8 @@
+- name: Bill Customer
+  link: /bill-customer/
+- name: All Stores
+  link: /all-stores/
+- name: Nearby
+  link: /nearby/
+- name: Settings
+  link: /settings/

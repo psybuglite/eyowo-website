@@ -1,0 +1,113 @@
+// 
+    // Base
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+// Resets
+html
+    font-size:                  $basefont
+
+*,
+*::before,
+*::after
+    box-sizing:                 border-box
+
+*
+    outline-color:              inherit
+    outline:                    none
+    a
+        outline:                none
+    button
+        outline:                none
+
+body
+    margin:                     0
+    font-family:                $sans-serif
+    background-color:           white
+
+p
+    margin:                     0
+    margin-bottom:              $basefont
+    &:last-child
+        margin-bottom:          0
+
+a,
+.as-link
+    text-decoration:            none
+    cursor:                     pointer
+    color:                      $primarycolor
+    font-weight:                $medium
+    transition:                 all 0.32s ease-out
+    &:focus, &:hover
+        text-decoration:        none
+        color:                  $sweetgray
+
+audio, canvas, img, video
+    display:                    block
+    max-width:                  unset
+
+img
+    width:                      100%
+    height:                     auto
+
+svg
+    pointer-events:             none
+    vertical-align:             middle
+    fill:                       inherit
+    transition:                 all 0.32s ease
+
+ul.none
+    padding-left:               0
+    list-style:                 none
+
+img.arrow
+    width:                                  8px
+    margin:                                 3px 5px
+    border-radius:                          none
+    box-shadow:                             none
+
+
+// Buttons, Inputs, 
+button
+    outline:                    none
+    &[type="button"]
+        box-sizing:             content-box
+        background:             none
+        border:                 0
+        border-radius:          0
+        color:                  inherit
+        cursor:                 pointer
+        overflow:               visible
+        padding:                0
+        font:                   inherit
+    &::-moz-focus-inner
+        border:                 0
+        padding:                0
+
+input
+    &[type="email"],
+    &[type="submit"],
+    &[type="reset"],
+    &[type="button"]
+        box-sizing:             content-box
+        background:             none
+        border:                 0
+        color:                  inherit
+        font-size:              inherit
+        font-family:            inherit
+        font-style:             normal
+        line-height:            normal
+        overflow:               visible
+        padding:                0
+        -webkit-user-select:    none
+        -webkit-appearance:     none
+        &::-moz-focus-inner
+            border:             0
+            padding:            0
+    &[type="button"],
+    &[type="submit"]
+        cursor:                 pointer
+
+

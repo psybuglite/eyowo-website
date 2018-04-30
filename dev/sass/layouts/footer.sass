@@ -1,0 +1,87 @@
+// 
+    // Global Footer
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+// Site Footer
+
+footer.main
+    background:                     #151515
+    padding:                        10px 0px
+    .wrap
+        max-width:                  1024px
+        margin:                     0 auto
+        padding:                    0 15px
+        display:                    flex
+        justify-content:            space-between
+        font-size:                  13px
+        align-items:                center
+    .copy-legal
+        display:                    flex
+        color:                      rgba(255,255,255, 0.4)
+        padding:                    13px 0px 0px 0px
+        a
+            margin:                 0px 5px
+            color:                  rgba(255,255,255, 0.4)
+        a:hover
+            color:                  $primarycolor
+    .stores
+        display:                    flex
+        .apple-store
+            border:                 none
+            width:                  100px
+            border-radius:          5px
+            height:                 33.5px
+            img
+                width:              100%
+        .google-store
+            width:                  100px
+            border-radius:          5px
+            height:                 33.5px
+            margin-left:            20px
+            img
+                width:              100%
+        .chat-now
+            width:                  100px
+            border-radius:          5px
+            height:                 33.5px
+            margin-left:            20px
+            img
+                width:              100%
+
+@media screen and (max-width: 740px)
+    footer.main
+        .wrap
+            display: flex
+            justify-content: space-between
+            font-size: 13px
+            flex-wrap: wrap-reverse
+            .copy-legal
+                color: rgba(255,255,255, 0.4)
+                padding: 13px 0px
+                width: 100%
+                justify-content: center
+                a
+                    margin-left: 10px
+                    color: rgba(255,255,255, 0.4)
+
+            .stores
+                width: 100%
+                justify-content: center
+                .apple-store
+                    width: 100px
+                    border-radius: 5px
+                    height: 33.5px
+                img
+                    width: 100%
+                .google-store
+                    width: 100px
+                    border-radius: 5px
+                    height: 33.5px
+                    margin-left: 30px
+                img
+                    width: 100%

@@ -1,0 +1,119 @@
+// 
+    // Text Decorations
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+// Texts
+.tx-c
+    text-align:                 center
+
+.text-shadow-light
+    text-shadow:                0 1px 3px rgba( 0, 0, 0, 0.5 )
+
+
+
+// Sizes
+.nanotext
+    font-size:                  $nanofont
+.microtext
+    font-size:                  $microfont
+.smalltext
+    font-size:                  $smallfont
+.mediumtext
+    font-size:                  $mediumfont
+
+
+// Weights
+.fw-normal
+    font-weight:                $normal
+.fw-medium
+    font-weight:                $medium
+.fw-bold
+    font-weight:                $bold
+
+
+
+// Headings
+h1, h2, h3, h4
+    font-weight:                $medium
+    margin-top:                 $space-sm
+    margin-bottom:              $space
+    
+h1, .h1
+    font-size:                  1.56rem
+    @media #{ $smallup }
+        font-size:              1.72rem
+
+h2, .h2
+    font-size:                  1.32rem
+    @media #{ $smallup }
+        font-size:              1.48rem
+
+h3, .h3
+    font-size:                  1.24rem
+
+.is-all-caps
+    text-transform:             uppercase
+    letter-spacing:             1.5px
+
+.section-title
+    padding-bottom:             $space
+    +caps( $smallfont, $medium, uppercase, 2px )
+    color:                      $primarycolor
+    border-bottom:              $borderline
+    margin-bottom:              $space-md
+
+
+
+// Links
+.sweetgray-links
+    color:                      $sweetgray
+    fill:                       $sweetgray
+    &:active,
+    &:focus,
+    &:hover
+        color:                  $primarycolor
+        fill:                   $primarycolor
+
+.richblack-links
+    color:                      $richblack
+    &:active,
+    &:focus,
+    &:hover
+        color:                  $sweetgray 
+
+.whitesmoke-links
+    color:                      $whitesmoke
+    opacity:                    1
+    svg
+        fill:                   $whitesmoke
+        opacity:                1
+    &:active,
+    &:focus,
+    &:hover
+        opacity:                 0.7                 
+        svg
+            opacity:             0.7                  
+
+.link-on-primary
+    color:                      $whitesmoke         
+    &:active,
+    &:focus,
+    &:hover
+        opacity:                0.7
+
+
+.left-bordered
+    display:                    block
+    border-left:                4px solid $primarycolor
+    padding-left:               $space-xs
+
+.view-more
+    display:                    flex
+    align-items:                center
+    line-height:                0
+    text-transform:             capitalize
+    font-size:                  96%
+    letter-spacing:             1px

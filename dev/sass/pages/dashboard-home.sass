@@ -1,0 +1,341 @@
+// 
+    // Global Footer
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+// dashboard home
+
+
+.dashboard-home
+    .container
+        display:                            flex
+        main
+            flex:                           1
+            .summary
+                background:                 white
+                padding:                    20px 0px
+                box-shadow:                 0px 0.5px 10px 0px rgba(0,0,0,0.05)
+                color:                      $readablegray
+                h4
+                    margin:                 0
+                    padding:                0px 0px 20px 30px
+                .transactions
+                    display:                grid
+                    grid-template-columns:  1fr 1fr 1fr
+                .transaction
+                    padding-left:           30px
+                    p
+                        font-size:          13px
+                        color:              $sweetgray
+                        margin-bottom:      5px
+                .transaction-number
+                    display:                flex
+                    align-items:            center
+                    p
+                        font-size:          24px
+                        color:              rgba(0,0,0,0.9)
+                        margin:             0px 10px 2px 0px
+                    span
+                        width:              18px
+                        height:             18px
+                        background:         green
+                        border-radius:      50%
+                        position:           relative
+                        &::before 
+                            content:        " "
+                            height:         0
+                            position:       absolute
+                            
+                            border:         medium solid pink
+                            border-width:   4px 0 4px 4px
+                            border-color:   transparent transparent transparent white
+                            transform:      rotate(-90deg)
+                    span.positive
+                        background:         green
+                        &::before
+                            transform:      rotate(-90deg)
+                            top:            5px
+                            width:          0
+                            z-index:        1
+                            right:          7px
+                    span.negative
+                        background:         red
+                        &::before
+                            transform:      rotate(90deg)
+                            top:            6px
+                            width:          0
+                            z-index:        1
+                            right:          7px
+                .count, .unique-customers
+                    border-left:            0.5px solid rgba(21,21,21,0.3)
+            .statistics
+                background:                 white
+                margin:                     30px 0px 40px 0px
+                box-shadow:                 0px 0.5px 10px 0px rgba(0,0,0,0.05)
+
+                .top
+                    display:                flex
+                    justify-content:        space-between
+                    align-items:            center
+                    padding:                20px 20px
+                h4
+                    margin-top:             0px
+                .stats
+                    height:                 300px
+            .top-stores
+                display:                    grid
+                grid-template-columns:      1fr 1fr 1fr
+                grid-gap:                   20px
+                padding-bottom:             40px
+                .store
+                    position:               relative
+                    background:             white
+                    border-radius:          7px
+                    box-shadow:             0px 0.5px 10px 0px rgba(0,0,0,0.05)
+                    .bg-image
+                        height:             70px
+                        img
+                            width:          100%
+                            height:         100%
+                            object-fit:     cover
+                            border-top-right-radius: 5px
+                            border-top-left-radius: 5px
+                    .store-logo
+                        width:              40px
+                        height:             40px
+                        position:           absolute
+                        left:               15px
+                        top:                50px
+                        border:             3px solid white
+                        border-radius:      50%
+                        box-shadow:         0px 0.5px 10px 0px rgba(0,0,0,0.2)
+                        img
+                            width:          100%
+                            height:         100%
+                            object-fit:     cover
+                            border-radius:  50%
+                    .store-name
+                        font-size:          13px
+                        font-weight:        bold
+                        margin:             25px 0px 5px 0px
+                        padding:            0px 10px 0px 10px
+                    .store-address
+                        font-size:          13px
+                        padding:            0px 10px 0px 10px
+                        font-weight:        lighter
+                    .total-transactions
+                        font-size:          13px
+                        padding:            0px 10px 0px 10px
+                        margin:             0px
+                    .store-transactions
+                        padding:            10px 10px 10px 10px
+                        display:            flex
+                        justify-content:    space-between
+                        font-size:          15px
+                        p
+                            margin:         0
+                    .store-transaction-amount
+                        color:              $primarycolor
+                    .store-transaction-stats
+                        color:              green
+                    button
+                        padding:            10px 0px
+                        width:              100%
+                        background:         $primarycolor
+                        color:              white
+                        border:             none
+                        border-bottom-right-radius: 5px
+                        border-bottom-left-radius: 5px
+                .add-store
+                    display:                flex
+                    flex-direction:         column
+                    justify-content:        center
+                    align-items:            center
+                    background:             white
+                    border-radius:          5px
+                    border:                 2px dashed rgba(0,0,0,0.1)
+                    height:                 100%
+                    box-shadow:                 0px 0.5px 10px 0px rgba(0,0,0,0.05)
+                    .add-icon
+                        display:            flex
+                        flex-direction:     column
+                        align-items:        center
+                        img
+                            width:          30px
+                            height:         30px
+                            object-fit:     cover
+                            margin-bottom:  10px
+        aside
+            width:                          300px
+            background:                     white
+            margin-left:                    30px
+            min-height:                     90vh
+            h4
+                padding-left:               20px
+                padding-bottom:             20px
+                border-bottom:              0.5px solid rgba(0,0,0,0.2)
+
+            .activity-timeline 
+                position:                   relative
+                max-width:                  300px
+                padding:                    0px 30px
+
+            .activity-timeline::after 
+                content:                    ''
+                position:                   absolute
+                width:                      1px
+                background-color:           rgba(0,0,0,0.3)
+                top:                        0
+                bottom:                     0
+                left:                       30px
+
+            .container 
+                padding:                    5px 20px
+                position:                   relative
+                background-color:           inherit
+                width:                      100%
+
+            .container::after 
+                content:                    ''
+                position:                   absolute
+                width:                      20px
+                height:                     20px
+                left:                       -9px
+                background-color:           #996c72
+                border:                     4px solid white
+                top:                        0px
+                border-radius:              50%
+                z-index:                    1
+            
+            .content 
+                padding:                    0px 10px
+                position:                   relative
+                margin-bottom:              20px
+                font-size:                  14px
+                p
+                    margin:                 0
+                    color:                  rgba(0,0,0,0.85)
+                    
+                span
+                    color:                  rgba(0,0,0,0.4)
+                    margin-top:             5px
+
+.back-to-dashboard
+    padding:                                30px 0px
+    img
+        width:                              23px
+        float:                              left
+
+@media screen and (max-width: 780px)
+    .dashboard-home
+        .container
+            display:                            flex
+            aside
+                display:                        none
+
+
+
+@media screen and (max-width: 550px)
+    .dashboard-home
+        .container
+            display:                            flex
+            main
+                .statistics
+                    background:                 white
+                    margin:                     30px 0px 40px 0px
+                    box-shadow:                 0px 0.5px 10px 0px rgba(0,0,0,0.15)
+
+                    .top
+                        display:                flex
+                        justify-content:        space-between
+                        align-items:            center
+                        padding:                20px 20px
+                    h4
+                        margin:                 0px
+                    .stats
+                        height:                 300px
+                    select
+                        margin:                 0
+                        border-bottom:          0.5px solid rgba(0,0,0,0.3)
+                        background:             none
+                .summary
+                    box-shadow:                 0px 0.5px 10px 0px rgba(0,0,0,0.15)
+                    .transactions
+                        display:                grid
+                        grid-template-columns:  1fr
+                    .transaction
+                        padding-left:           30px
+                        margin-bottom:          30px
+                        padding-bottom:         10px
+                        border-bottom:          0.5px solid rgba(0,0,0,0.3)
+                        p
+                            font-size:          13px
+                            color:              $sweetgray
+                            margin-bottom:      5px
+                    .transaction-number
+                        display:                flex
+                        align-items:            center
+                        p
+                            font-size:          24px
+                            color:              rgba(0,0,0,0.9)
+                            margin:             0px 10px 2px 0px
+                    .count, .unique-customers
+                        border-left:            none
+                .top-stores
+                    display:                    grid
+                    grid-template-columns:      1fr
+                    grid-gap:                   20px
+                    padding-bottom:             40px
+                    .store
+                        position:               relative
+                        background:             white
+                        border-radius:          7px
+                        margin-bottom:          20px
+                        box-shadow:             0px 0.5px 10px 0px rgba(0,0,0,0.15)
+                        .bg-image
+                            height:             110px
+                            img
+                                width:          100%
+                                height:         100%
+                                object-fit:     cover
+                                border-top-right-radius: 5px
+                                border-top-left-radius: 5px
+                        .store-logo
+                            width:              40px
+                            height:             40px
+                            position:           absolute
+                            left:               15px
+                            top:                90px
+                            border:             3px solid white
+                            border-radius:      50%
+                            img
+                                width:          100%
+                                height:         100%
+                                object-fit:     cover
+                                border-radius:  50%
+                    .add-store
+                        display:                flex
+                        flex-direction:         column
+                        justify-content:        center
+                        align-items:            center
+                        background:             white
+                        border-radius:          5px
+                        border:                 2px dashed rgba(0,0,0,0.1)
+                        height:                 100%
+                        padding:                30px 0px
+                        box-shadow:             0px 0.5px 10px 0px rgba(0,0,0,0.15)
+                        .add-icon
+                            display:            flex
+                            flex-direction:     column
+                            align-items:        center
+                            img
+                                width:          30px
+                                height:         30px
+                                object-fit:     cover
+                                margin-bottom:  10px
+    button
+        font-weight:                            bold

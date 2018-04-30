@@ -1,0 +1,86 @@
+<header class="experience-it">
+    <nav class="main-nav">
+        <ul>
+            <li class="logo"><a href="{{ site.url }}"><img src="{{ site.url }}/img/white-logo.svg" alt=""></a></li>
+            <li class="nav-list">
+                <ul>
+                    <li><a href="{{site.url }}/experience-it" class="active-link">Experience It</a></li>
+                    <li><a href="{{site.url }}/business">For Business</a></li>
+                    <li><a href="{{site.url }}/">FAQs</a></li>
+                    <li><a href="{{site.url }}/"><button><img src="{{ site.url }}/img/logo-white.svg" alt="" class="cowrie">MY EYOWO</button></a></li>
+                </ul>
+            </li>
+            <div class="mobile-top-nav">
+                <div class="nav-menu" onclick="showmenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <nav class="mobile-nav">
+        <ul class="sub-ul">
+            <li><a href="{{site.url }}/experience-it">Experience It</a></li>
+            <li><a href="{{site.url }}/business">For Business</a></li>
+            <li><a href="{{site.url }}/">FAQs</a></li>
+            <li><a href="{{site.url }}/">MY EYOWO</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        var mobileNav = document.querySelector(".mobile-nav");
+        function showmenu(x) {
+            x.classList.toggle("change");
+            mobileNav.classList.toggle("open-nav");
+        }
+    </script>
+
+    <div class="heading container">
+        <h1>Experience Eyowo now</h1>
+        <p>To experience Eyowo, just input your phone number and you will instantly get credited if you have never used Eyowo previously. <a href="">Register/Sign In</a></p>
+        <form action="">
+            <input type="text" placeholder="Enter Phone Number">
+            <button>Try it now</button>
+        </form>
+    </div>
+</header>
+
+<section class="experiences">
+    <div class="grid-3-cols container">
+        <div class="experience">
+            <h3>Experience with USSD</h3>
+            <p>Eyowo grants you access to affordable, convenient and secure financial transactions. Dial <span>*347*5#</span> to see all you can do using USSD.</p>
+        </div>
+        <div class="experience">
+            <h3>Experience on Web</h3>
+            <p>Everyday we make some sort of financial transactions. Whether you are receiving money, transferring or paying bills, you want to be sure your transaction is successful. Eyowo relieves you from the stress and complications that come.</p>
+        </div>
+        <div class="experience">
+            <h3>Experience on Mobile</h3>
+            <p>Eyowo grants you access to affordable, convenient and secure financial transactions. Dial <span>*347*5#</span> to see all you can do using USSD.</p>
+        </div>
+    </div>
+</section>
+
+<section class="getting-started">
+    <div class="container grid-2-cols bottom-application">
+        <div class="left">
+            <img src="http://res.cloudinary.com/psybug/image/upload/c_scale,w_525/v1525109055/getting-started_usrqw8.png" alt="">
+        </div>
+        <div class="right">
+            <h3>Getting started with Eyowo</h3>
+            <p>Eyowo eliminates the hassles associated with making payments online and offline. With Eyowo, you can transfer and receive cash whenever and however. You no longer have to worry about long queues, tedious processes and crappy internet connectivity.</p>
+        </div>
+    </div>
+</section>
+
+<section class="black-download-area">
+    <div class="container">
+        <h1>Download Eyowo for iOS &amp; Android</h1>
+        <div class="links">
+            <a href=""><img src="{{ site.url }}/img/black-appstore.svg" alt=""></a>
+            <a href=""><img src="{{ site.url }}/img/black-googleplay.svg" alt=""></a>
+        </div>
+    </div>
+</section>

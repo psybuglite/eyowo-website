@@ -1,0 +1,73 @@
+// 
+    // Directory for the Grid
+
+    // @package eyowo
+    // @author  Kabolobari Benakole <i@kb.life>
+    // @version 1.0.0
+
+//
+
+// Site Wrappers
+.site-wrapper
+    display:                    flex
+    flex-direction:             column
+    min-height:                 100vh
+
+.site-main
+    flex:                       1
+
+.boxed-width
+    max-width:                  $maxwidth-lt
+    margin:                     0 auto
+
+.wrapper
+    padding:                    $space
+    &.will-grow
+        @media #{ $smallup }
+            padding:            $space-sm $space
+        @media #{ $mediumup }
+            padding:            $space-md $space
+        @media #{ $largeup }
+            padding:            $space-lg $space
+
+.wrapper-x
+    padding-right:              $space
+    padding-left:               $space
+
+
+
+// The Grid
+.grid
+    display:                    grid
+    grid-template-columns:      repeat( 12, 1fr )
+    grid-gap:                   $space
+
+    &.is-1-2-2
+        .grid-item
+            grid-column:            1 / 13
+            @media #{ $smallup }
+                &:nth-child(odd)
+                    grid-column:    1 / 7
+                &:nth-child(even)
+                    grid-column:    7 / 13
+
+
+    &.is-multi-col.mostly-3
+        grid-template-columns:  repeat( auto-fit, minmax( 296px, 1fr ) )
+
+    &.is-multi-col.mostly-4
+        grid-template-columns:  repeat( auto-fit, minmax( 160px, 1fr ) )
+
+    .col-6
+        grid-column:            1 / 7
+        &.offset-6-cols-from-left
+            grid-column:        7 / 13
+
+    .col-12
+        grid-column:            1 / 13
+
+    @media #{ $smallup }
+        .col-6-sm
+            grid-column:        1 / 7
+            &.offset-6-cols-from-left
+                grid-column:    8 / 13

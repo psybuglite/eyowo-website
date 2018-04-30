@@ -1,0 +1,47 @@
+// 
+    // Color Classes
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+//
+
+// Backgrounds
+.bg-whitesmoke
+    background-color:           $whitesmoke
+
+.bg-platinum
+    background-color:           $platinum
+
+.bg-img-filtered
+    position:                   relative
+    &::after
+        content:                ''
+        position:               absolute
+        top:                    0
+        right:                  0
+        bottom:                 0
+        left:                   0
+        background-color:       rgba( 0, 0, 0, 0.5 )
+
+
+
+// Colors
+.co-white
+    color:                      #fff
+    &.is-dimmer
+        opacity:                0.8
+
+.co-sweetgray
+    color:                      $sweetgray
+
+.co-readablegray
+    color:                      $readablegray   
+
+
+
+// Opacity
+.opacity-7
+    opacity:                    0.7
+.opacity-1
+    opacity:                    1

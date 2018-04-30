@@ -1,0 +1,98 @@
+<header class="business">
+    <nav class="main-nav">
+        <ul>
+            <li class="logo"><a href="{{ site.url }}"><img src="{{ site.url }}/img/logo.svg" alt=""></a></li>
+            <li class="nav-list">
+                <ul>
+                    <li><a href="{{site.url }}/experience-it">Experience It</a></li>
+                    <li><a href="{{site.url }}/business" class="active-link">For Business</a></li>
+                    <li><a href="{{site.url }}/">FAQs</a></li>
+                    <li><a href="{{site.url }}/"><button><img src="{{ site.url }}/img/logo-white.svg" alt="" class="cowrie">MY EYOWO</button></a></li>
+                </ul>
+            </li>
+            <div class="mobile-top-nav">
+                <div class="nav-menu" onclick="showmenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <nav class="mobile-nav">
+        <ul class="sub-ul">
+            <li><a href="{{site.url }}/experience-it">Experience It</a></li>
+            <li><a href="{{site.url }}/business">For Business</a></li>
+            <li><a href="{{site.url }}/">FAQs</a></li>
+            <li><a href="{{site.url }}/">MY EYOWO</a></li>
+        </ul>
+    </nav>
+    
+    <script>
+        var mobileNav = document.querySelector(".mobile-nav");
+        function showmenu(x) {
+            x.classList.toggle("change");
+            mobileNav.classList.toggle("open-nav");
+        }
+    </script>
+
+    <div class="heading container">
+        <h1>Helping businesses &amp; agents</h1>
+        <p>To experience Eyowo, just input your phone number and you will instantly get credited if you have never used Eyowo previously.</p>
+    </div>
+</header>
+
+<section class="business-eyowo-application">
+    <div class="container grid-2-cols top-application">
+        <article class="left">
+            <img src="http://res.cloudinary.com/psybug/image/upload/c_scale,w_514/v1525108878/for-business_cmrqju.png" alt="">
+            <h3>For business</h3>
+            <p>Everyday we make some sort of financial transactions. Whether you are receiving money, transferring or paying bills, you want to be sure your transaction is successful.</p>
+            <p>Eyowo is definitely a better way to pay your bills. Eyowo will relieve you from the stress and complications that come.</p>
+            <a href="">Register/Sign In as a Merchant</a>
+        </article>
+        <article class="right">
+            <img src="http://res.cloudinary.com/psybug/image/upload/c_scale,w_514/v1525108789/as-agent_glvffw.png" alt="">
+            <h3>As an agent</h3>
+            <p>Eyowo eliminates the hassles associated with making payments online and offline. With Eyowo, you can transfer and receive cash whenever and however.</p>
+            <p>You no longer have to worry about long queue, tedious processes and crappy internet connectivity.</p>
+            <a href="">Register/Sign In as an Agent</a>
+        </article>
+    </div>
+</section>
+
+
+<section class="till-area">
+    <div class="container">
+        <h1>CHANGING LIVES. CREATING OPPORTUNITIES</h1>
+        <p>Eyowo’s amazing user experience and ease of use makes it the best payment solution tool available. What Eyowo offers is more than just payment transactions In reality, it is a whole new experience.</p>
+        <h3>Download Till app and agent app</h3>
+        <div class="links">
+            <a href=""><img src="{{ site.url }}/img/black-appstore.svg" alt=""></a>
+            <a href=""><img src="{{ site.url }}/img/black-googleplay.svg" alt=""></a>
+        </div>
+    </div>
+</section>
+
+
+<section class="getting-started">
+    <div class="container grid-2-cols bottom-application">
+        <div class="left">
+            <img src="http://res.cloudinary.com/psybug/image/upload/c_scale,w_525/v1525109055/getting-started_usrqw8.png" alt="">
+        </div>
+        <div class="right">
+            <h3>Getting started with Eyowo</h3>
+            <p>Eyowo eliminates the hassles associated with making payments online and offline. With Eyowo, you can transfer and receive cash whenever and however. You no longer have to worry about long queues, tedious processes and crappy internet connectivity.</p>
+        </div>
+    </div>
+</section>
+
+<section class="black-download-area">
+    <div class="container">
+        <h1>Download Eyowo for iOS &amp; Android</h1>
+        <div class="links">
+            <a href=""><img src="{{ site.url }}/img/black-appstore.svg" alt=""></a>
+            <a href=""><img src="{{ site.url }}/img/black-googleplay.svg" alt=""></a>
+        </div>
+    </div>
+</section>

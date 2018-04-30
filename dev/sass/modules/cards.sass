@@ -1,0 +1,54 @@
+// 
+    // Cards
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+.postcard
+    display:                block
+
+    &::before
+        content:            ''
+        position:           absolute
+        top:                0
+        right:              0
+        bottom:             0
+        left:               0
+        background-image:   linear-gradient( 180deg, rgba( 0, 0, 0, 0.5 ) 0, transparent 40%, transparent 60%, rgba( 0, 0, 0, 0.8 ) )
+
+    .thumbnail
+        object-fit:         cover
+        width:              100%
+
+    .category
+        position:           absolute
+        top:                $space
+        left:               $space
+
+    .details
+        position:           absolute
+        bottom:             $space
+        width:              100%
+        padding:            0 $space 0
+        display:            flex
+        align-items:        center
+        justify-content:    space-between
+
+        .title
+            color:          #fff
+            font-size:      1.15rem
+            font-weight:    $thin
+            max-width:      96%
+            margin-right:   $space
+            @media #{ $smallup }
+                font-size:  1.32rem
+
+
+.blurb
+    padding:                $space-sm
+    border-radius:          4px
+    box-shadow:             $brashboxshadow
+    background-color:       #fff

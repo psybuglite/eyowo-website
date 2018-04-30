@@ -1,0 +1,49 @@
+// 
+    // Global Header
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+
+//
+
+header.setup-header
+    padding:                    20px 0px
+    box-shadow:                 0px 1px 0.5px 0px rgba(0,0,0,0.15)
+    background:                 white
+
+    .logo-and-nav
+        padding:                0 15px
+        margin:                 0 auto
+        list-style:             none
+        display:                flex
+        justify-content:        space-between
+        align-items:            center
+        max-width:              1024px
+        .logo
+            height:             30px
+            a
+                img
+                    width:      110px
+        ul
+            list-style:         none
+            padding:            0
+            li
+                margin-left:    30px
+            a
+                color:          rgba(0,0,0,0.85)
+                font-size:      14px
+            a:hover
+                color:          $primarycolor
+
+@media screen and (max-width: 500px)
+    header.setup-header
+        ul
+            justify-content:        space-between
+            li.logo
+                height:             30px
+                a
+                    img
+                        width:      100px
+                        margin-top: 5px
+            

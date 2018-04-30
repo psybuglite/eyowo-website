@@ -1,0 +1,678 @@
+// 
+    // Home Page
+
+    // @package eyowo
+    // @author  Tonye Dickson <psybug>
+    // @version 1.0.0
+    
+//
+
+a.active-link
+    color:                                  pink
+
+.buttons
+    display:                                flex
+
+button
+    display:                                flex
+    align-items:                            center
+img.arrow
+    width:                                  8px
+    margin:                                 3px 5px
+    border-radius:                          none
+    box-shadow:                             none
+.play
+    width:                                  30px
+    margin:                                 -5px 5px 0px 5px
+
+.cowrie
+    width:                                  16px
+    margin:                                 0px 5px 0px 5px
+
+.container
+    padding:                                        0px 15px
+    max-width:                                      1024px
+    margin:                                         0 auto
+
+.grid-2-cols
+    display:                                        grid
+    grid-template-columns:                          1fr 1fr
+    grid-gap:                                       2.5rem
+
+.grid-3-cols
+    display:                                        grid
+    grid-template-columns:                          1fr 1fr 1fr
+    grid-gap:                                       20px
+.change.nav-menu
+    z-index:                        1000
+.nav-menu 
+    display:                        block
+    cursor:                         pointer
+    z-index:                        20
+.bar1, .bar2, .bar3 
+    width:                      20px
+    height:                     2px
+    background-color:           rgba(0,0,0,0.7)
+    margin:                     4px 0
+    transition:                 0.4s
+.change .bar1
+    transform:                      rotate(-45deg) translate(-2px, 5px)
+    background-color:               rgba(0,0,0,0.8)
+
+.change .bar2
+    opacity:                        0
+.change .bar3
+    transform:                      rotate(45deg) translate(-3px, -7px)
+    background-color:               rgba(0,0,0,0.8)
+.mobile-nav
+    height:                             0px
+    background:                         none
+    transition:                         all 0.3s
+    ul
+        padding:                        15px
+        list-style:                     none
+        display:                        flex
+        flex-direction:                 column
+        height:                         100%
+        justify-content:                space-between
+        margin:                         0
+        align-items:                    flex-end
+        opacity:                        0
+        transition:                     all 0.3s
+        li
+            transform:                  translateY(-230px)
+            transition:                 all 0.3s
+        button
+            transition:                 all 0.3s
+.change.nav-menu
+    z-index:                        900
+
+.nav-menu 
+    display:                        block
+    cursor:                         pointer
+    z-index:                        20
+.mobile-top-nav
+    display:                        none
+
+.open-nav.mobile-nav
+    height:                             180px
+    ul
+        opacity:                        1
+        li
+            transform:                  translateY(0px)
+            font-size:                  1.2rem
+        button
+            font-size:                  1.2rem
+
+header.home
+    height:                                         800px
+    background:                                     url("http://res.cloudinary.com/psybug/image/upload/c_scale,w_1263/v1525109556/home_cpv1fx.png")
+    background-size:                                cover
+    background-repeat:                              no-repeat
+    background-position:                            center center
+    nav.main-nav
+        a
+            color:                                  $readablegray
+    nav.main-nav
+        padding:                            30px 0px
+        position:                           relative
+        z-index:                            2000
+        ul
+            padding:                        0 15px
+            margin:                         0 auto
+            list-style:                     none
+            display:                        flex
+            justify-content:                space-between
+            align-items:                    center
+            max-width:                      1024px
+            li.logo
+                height:                     30px
+                a
+                    img
+                        width:              110px
+            
+            li.nav-list
+                ul
+                    display:                flex
+                    padding:                0px
+                    li
+                        margin-left:        30px
+                        a.active-link
+                            color:          $primarycolor
+                    button
+                        padding:            10px 25px
+                        color:              white
+                        background:         $primarycolor
+                        border:             none
+                        border-radius:      50px
+
+        
+    .full-width
+        width:                                      100vw
+        
+        .right
+            margin-top:                             70px
+        .left
+            display:                                flex
+            flex-direction:                         column
+            justify-content:                        center
+            padding-top:                            5vh
+            h1
+                font-size:                          2.5rem
+                font-weight:                        bold
+                margin:                             3px 0px
+            h1.tag
+                color:                              $primarycolor
+            p
+                padding:                            10px 10px 10px 0px
+                line-height:                        1.7rem
+                color:                              rgba(0,0,0,0.6)
+            .buttons
+                button
+                    margin-right:                   20px
+                    padding:                        10px 0px
+                    border:                         none
+                    background:                     none
+                    color:                          $primarycolor
+                    font-size:                      1rem
+
+@media screen and (max-width: 650px)
+    .mobile-top-nav
+        display:                                    block
+@media screen and (max-width: 650px)
+    header.home
+        height:                                         auto
+        background:                                     none
+        nav
+            a
+                color:                                  $readablegray
+        nav.main-nav
+            padding:                            30px 0px
+            ul
+                padding:                        0 15px
+                margin:                         0 auto
+                list-style:                     none
+                display:                        flex
+                align-items:                    center
+                max-width:                      1024px
+                li.logo
+                    flex:                       1
+                    height:                     30px
+                    a
+                        img
+                            width:              110px
+                
+                li.nav-list
+                    display:                    none
+                   
+
+        .full-width
+            width:                                      100vw
+            padding-bottom:                             50px
+            .grid-2-cols
+                grid-template-columns:          1fr
+            .right
+                display: none
+            .left
+                display:                                flex
+                flex-direction:                         column
+                justify-content:                        center
+                padding-top:                            25vh
+                h1
+                    font-size:                          2.5rem
+                    font-weight:                        bold
+                    margin:                             3px 0px
+                h1.tag
+                    color:                              $primarycolor
+                p
+                    padding:                            10px 10px 10px 0px
+                    line-height:                        1.7rem
+                    color:                              rgba(0,0,0,0.6)
+                .buttons
+                    button
+                        margin-right:                   20px
+                        padding:                        10px 0px
+                        border:                         none
+                        background:                     none
+                        color:                          $primarycolor
+                        font-size:                      1rem
+                    button:hover
+                        cursor: pointer
+
+
+.in-action
+    padding-bottom:                                 200px
+    .eyowo-in-action
+        background-position:                        center center
+        background-size:                            cover
+        background-repeat:                          no-repeat
+        width:                                      550px
+        height:                                     350px
+        position:                                   relative
+        border-radius:                              5px
+        box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
+        .action-content
+            width:                                  600px
+            position:                               absolute
+            top:                                    130px
+            right:                                  -450px
+            background:                             #fcfcfc
+            padding:                                30px 50px
+            box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
+            border-radius:                          5px
+            h1
+                font-size:                          2rem
+                font-weight:                        bold
+            p
+                line-height:                        1.7rem
+                color:                              rgba(0,0,0,0.6)
+            h1, p
+                margin-bottom:                      30px
+            button
+                margin-right:                       20px
+                padding:                            10px 0px
+                border:                             none
+                background:                         none
+                color:                              $primarycolor
+                font-size:                          1rem
+
+
+@media screen and (max-width: 1030px)
+    .in-action
+        padding-bottom:                                 50px
+        .eyowo-in-action
+            background-position:                        center center
+            background-size:                            cover
+            background-repeat:                          no-repeat
+            width:                                      100%
+            height:                                     550px
+            position:                                   relative
+            border-radius:                              5px
+            box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
+            .action-content
+                width:                                  100%
+                position:                               absolute
+                top:                                    70px
+                right:                                  0px
+                background:                             #fcfcfc
+                padding:                                30px 30px
+                box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
+                border-radius:                          5px
+                h1
+                    font-size:                          2rem
+                    font-weight:                        bold
+                p
+                    line-height:                        1.7rem
+                    color:                              rgba(0,0,0,0.6)
+                h1, p
+                    margin-bottom:                      30px
+                button
+                    margin-right:                       20px
+                    padding:                            10px 0px
+                    border:                             none
+                    background:                         none
+                    color:                              $primarycolor
+                    font-size:                          1rem
+
+
+.eyowo-application
+    padding:                                        50px 0px
+    background:                                     #fcfcfc
+    .title
+        text-align:                                 center
+        h1
+            font-size:                              2rem
+            font-weight:                            bold
+        p
+            line-height:                            1.7rem
+            color:                                  rgba(0,0,0,0.6)
+            max-width:                              620px
+            margin:                                 0 auto
+        h1, p
+            margin-bottom:                          30px
+    .top-application
+        padding-bottom:                             30px
+        border-bottom:                              0.5px solid rgba(0,0,0,0.3)
+    article
+        padding:                                    20px 0px
+        img
+            width:                                  100%
+            border-radius:                          5px
+            box-shadow:                             0px 1px 20px 0px rgba(0,0,0,0.2)
+        h3
+            font-size:                              1.3rem
+            font-weight:                            bold
+        p
+            line-height:                            1.7rem
+            color:                                  rgba(0,0,0,0.6)
+            max-width:                              620px
+            margin:                                 0 auto
+        h3, p
+            margin-bottom:                          20px
+        button
+            margin-right:                           20px
+            padding:                                10px 0px
+            border:                                 none
+            background:                             none
+            color:                                  $primarycolor
+            font-size:                              1rem
+    .bottom-application
+        padding:                                    70px 15px 20px 15px
+        img
+            width:                                  100%
+            border-radius:                          5px
+            box-shadow:                             0px 1px 20px 0px rgba(0,0,0,0.2)
+        h3
+            font-size:                              1.3rem
+            font-weight:                            bold
+            margin-top:                             0px
+
+        p
+            line-height:                            1.7rem
+            color:                                  rgba(0,0,0,0.6)
+            max-width:                              620px
+            margin:                                 0 auto
+        h3, p
+            margin-bottom:                          20px
+        button
+            margin-right:                           20px
+            padding:                                10px 0px
+            border:                                 none
+            background:                             none
+            color:                                  $primarycolor
+            font-size:                              1rem
+
+
+
+@media screen and (max-width: 550px)
+    .eyowo-application
+        .grid-2-cols
+            grid-template-columns:                      1fr
+
+
+.is-unique
+    padding-top:                                    70px
+    padding-bottom:                                 200px
+    .eyowo-is-unique
+        background-position:                        center center
+        background-size:                            cover
+        background-repeat:                          no-repeat
+        width:                                      550px
+        height:                                     350px
+        position:                                   relative
+        border-radius:                              5px
+        box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
+        float:                                      right
+        .unique-content
+            width:                                  600px
+            position:                               absolute
+            top:                                    130px
+            left:                                   -450px
+            background:                             #fcfcfc
+            padding:                                30px 50px
+            box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
+            border-radius:                          5px
+            h1
+                font-size:                          2rem
+                font-weight:                        bold
+            p
+                line-height:                        1.7rem
+                color:                              rgba(0,0,0,0.6)
+            h1, p
+                margin-bottom:                      30px
+            button
+                margin-right:                       20px
+                padding:                            10px 0px
+                border:                             none
+                background:                         none
+                color:                              $primarycolor
+                font-size:                          1rem
+
+
+
+@media screen and (max-width: 1030px)
+    .is-unique
+        padding-bottom:                                 50px
+        .eyowo-is-unique
+            width:                                      100%
+            height:                                     550px
+            position:                                   relative
+            border-radius:                              5px
+            box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
+            .unique-content
+                width:                                  100%
+                position:                               absolute
+                top:                                    70px
+                left:                                   0px
+                background:                             #fcfcfc
+                padding:                                30px 30px
+                box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
+                border-radius:                          5px
+                h1
+                    font-size:                          2rem
+                    font-weight:                        bold
+                p
+                    line-height:                        1.7rem
+                    color:                              rgba(0,0,0,0.6)
+                h1, p
+                    margin-bottom:                      30px
+                button
+                    margin-right:                       20px
+                    padding:                            10px 0px
+                    border:                             none
+                    background:                         none
+                    color:                              $primarycolor
+                    font-size:                          1rem
+
+
+
+
+.tweets-area
+    padding:                                        50px 0px
+    background-image:                               url("http://res.cloudinary.com/psybug/image/upload/c_scale,w_1335/v1525109110/blur_pord63.png")
+    background-repeat:                              no-repeat
+    background-size:                                cover
+    background-position:                            center center
+    color:                                          rgba(255,255,255,0.8)
+    .tweets
+        height:                                     500px
+    .right
+        display:                                    flex
+        flex-direction:                             column
+        justify-content:                            center
+    h1
+        font-size:                                  2rem
+        font-weight:                                bold
+    p
+        line-height:                                1.7rem
+        color:                                      rgba(255,255,255,0.6)
+    h1, p
+        margin-bottom:                              20px
+    button
+        margin-right:                               20px
+        padding:                                    10px 0px
+        border:                                     none
+        background:                                 none
+        color:                                      rgba(255,255,255,0.8)
+        font-size:                                  1rem
+        width:                                      178px
+
+
+@media screen and (max-width: 550px)
+    .tweets-area
+        .grid-2-cols
+            grid-template-columns:                      1fr
+        .tweets
+            height:                                     auto
+
+
+.download-area
+    padding:                                        50px 0px
+    .container
+        height:                                     400px
+        display:                                    flex
+        flex-direction:                             column
+        align-items:                                center
+        justify-content:                            center
+        padding-top:                             100px
+        h1
+            font-size:                              2rem
+            font-weight:                            bold
+        img
+            width:                                  150px
+        a
+            margin:                                 20px
+        .links
+            display:                                flex
+
+
+@media screen and (max-width: 550px)
+    .download-area
+        padding:                                        50px 0px
+        .container
+            height:                                     200px
+            display:                                    flex
+            flex-direction:                             column
+            align-items:                                center
+            justify-content:                            center
+            padding-top:                                0px
+
+            h1
+                font-size:                              2rem
+                font-weight:                            bold
+                text-align:                             center
+            img
+                width:                                  130px
+            a
+                margin:                                 15px
+            .links
+                display:                                flex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.iphone
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999, 0 0 30px 0px rgba(0, 0, 0, 0.1)
+  border: 5px solid #d9dbdc
+  background: #f8f8f8
+  padding: 15px
+  border-radius: 50px
+  height: 577px
+  width: 300px
+  position: relative
+  -webkit-transform: scale(0.8)
+  transform: scale(0.8)
+  margin-top: 25px
+
+.iphone-top
+  padding: 5px 110px 20px
+  position: relative
+  .speaker
+    display: block
+    width: 30px
+    height: 6px
+    margin: 0 auto
+    border-radius: 6px
+    background: #292728
+  .camera
+    display: block
+    margin: 0 auto
+    height: 7px
+    width: 7px
+    border-radius: 50%
+    margin-bottom: 13px
+    background: #333
+  .sensor
+    display: block
+    width: 10px
+    height: 10px
+    float: left
+    background: #333
+    margin-top: -1px
+    margin-right: 10px
+    border-radius: 50%
+
+.top-bar, .bottom-bar
+  display: block
+  width: 352px
+  height: 15px
+  border-left: 5px solid #BBB
+  border-right: 5px solid #BBB
+  position: absolute
+  left: -5px
+
+.top-bar
+  top: 65px
+
+.bottom-bar
+  bottom: 65px
+
+.iphone-screen
+  background: #eee
+  height: 430px
+  width: 245px
+  margin: 0 auto
+  border: 0.5px solid rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  overflow: hidden
+  video
+    width: 100%
+    height: 100%
+
+.iphone-buttons
+  .on-off, .up, .down, .sleep
+    display: block
+    background: #CCC
+    position: absolute
+    border-radius: 2px 0px 0px 2px
+  .on-off
+    height: 40px
+    width: 3px
+    top: 100px
+    left: -8px
+  .up, .down, .sleep
+    height: 60px
+    width: 5px
+    left: -10px
+  .up
+    top: 170px
+  .down
+    top: 250px
+  .sleep
+    left: auto
+    right: -10px
+    top: 170px
+    border-radius: 0px 2px 2px 0px
+
+.iphone-bottom
+  padding: 10px 0 0
+  span
+    display: block
+    margin: 0 auto
+    width: 48px
+    height: 48px
+    background: #ccc
+    border-radius: 50%
+    background: linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%)
+    position: relative
+    &:after
+      content: ""
+      display: block
+      width: 40px
+      height: 40px
+      background: #fff
+      border-radius: 50%
+      position: absolute
+      left: 4px
+      top: 4px
