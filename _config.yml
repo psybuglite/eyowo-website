@@ -1,33 +1,36 @@
----
-title: Eyowo
-timezone: Africa/Lagos
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-shortname: Eyowo
-company: Softcom LTD
-description: Payments, Anytime, Anywhere
-url: http://app.eyowo.com
-charset: UTF-8
+# Site settings
+title:          Eyowo
+shortname:      Eyowo
+company:        Softcom LTD
+description:    >-
+  Payments, Anytime, Anywhere
+url:            'http://app.eyowo.com'
+charset:        'UTF-8'
+timezone:       Africa/Lagos
+
+
+# Included Plugins
 plugins:
-- jekyll-sitemap
-- jekyll-seo-tag
-- jekyll-feed
-- jekyll-paginate
-markdown: kramdown
-permalink: pretty
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+
+# Build settings
+markdown:       kramdown
+permalink:      pretty
+
+
+# Exclude from processing.
 exclude:
-- Gemfile
-- Gemfile.lock
-- node_modules
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
-- package.json
-- dev
-- ".gitignore"
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - dev
+  - .gitignore

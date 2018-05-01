@@ -12,18 +12,20 @@ a.active-link
 
 .buttons
     display:                                flex
-
+    align-items:                            center
+button:hover
+    cursor:                                 pointer 
 button
     display:                                flex
     align-items:                            center
 img.arrow
     width:                                  8px
-    margin:                                 3px 5px
+    margin:                                 3px 0px 3px 10px
     border-radius:                          none
     box-shadow:                             none
 .play
     width:                                  30px
-    margin:                                 -5px 5px 0px 5px
+    margin:                                 0px 0px 0px 10px
 
 .cowrie
     width:                                  16px
@@ -105,7 +107,7 @@ img.arrow
             font-size:                  1.2rem
 
 header.home
-    height:                                         800px
+    min-height:                                     50vh
     background:                                     url("http://res.cloudinary.com/psybug/image/upload/c_scale,w_1263/v1525109556/home_cpv1fx.png")
     background-size:                                cover
     background-repeat:                              no-repeat
@@ -117,6 +119,7 @@ header.home
         padding:                            30px 0px
         position:                           relative
         z-index:                            2000
+        background:                         white
         ul
             padding:                        0 15px
             margin:                         0 auto
@@ -130,7 +133,7 @@ header.home
                 a
                     img
                         width:              110px
-            
+
             li.nav-list
                 ul
                     display:                flex
@@ -146,7 +149,7 @@ header.home
                         border:             none
                         border-radius:      50px
 
-        
+
     .full-width
         width:                                      100vw
         
@@ -181,11 +184,10 @@ header.home
         display:                                    block
 @media screen and (max-width: 650px)
     header.home
-        height:                                         auto
-        background:                                     none
+        background:                                 none
         nav
             a
-                color:                                  $readablegray
+                color:                              $readablegray
         nav.main-nav
             padding:                            30px 0px
             ul
@@ -193,10 +195,10 @@ header.home
                 margin:                         0 auto
                 list-style:                     none
                 display:                        flex
+                justify-content:                space-between
                 align-items:                    center
                 max-width:                      1024px
                 li.logo
-                    flex:                       1
                     height:                     30px
                     a
                         img
@@ -204,20 +206,20 @@ header.home
                 
                 li.nav-list
                     display:                    none
-                   
+
 
         .full-width
             width:                                      100vw
             padding-bottom:                             50px
             .grid-2-cols
-                grid-template-columns:          1fr
+                grid-template-columns:                  1fr
             .right
-                display: none
+                display:                                none
             .left
                 display:                                flex
                 flex-direction:                         column
                 justify-content:                        center
-                padding-top:                            25vh
+                padding-top:                            100px
                 h1
                     font-size:                          2.5rem
                     font-weight:                        bold
@@ -241,24 +243,12 @@ header.home
 
 
 .in-action
-    padding-bottom:                                 200px
+    padding-bottom:                                 50px
     .eyowo-in-action
-        background-position:                        center center
-        background-size:                            cover
-        background-repeat:                          no-repeat
-        width:                                      550px
-        height:                                     350px
-        position:                                   relative
         border-radius:                              5px
-        box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
         .action-content
-            width:                                  600px
-            position:                               absolute
-            top:                                    130px
-            right:                                  -450px
             background:                             #fcfcfc
             padding:                                30px 50px
-            box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
             border-radius:                          5px
             h1
                 font-size:                          2rem
@@ -276,44 +266,15 @@ header.home
                 color:                              $primarycolor
                 font-size:                          1rem
 
-
-@media screen and (max-width: 1030px)
+ 
+@media screen and (max-width: 600px)
     .in-action
-        padding-bottom:                                 50px
+        .grid-2-cols
+            grid-template-columns:                 1fr
         .eyowo-in-action
-            background-position:                        center center
-            background-size:                            cover
-            background-repeat:                          no-repeat
-            width:                                      100%
-            height:                                     550px
-            position:                                   relative
-            border-radius:                              5px
-            box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
             .action-content
-                width:                                  100%
-                position:                               absolute
-                top:                                    70px
-                right:                                  0px
-                background:                             #fcfcfc
                 padding:                                30px 30px
-                box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
-                border-radius:                          5px
-                h1
-                    font-size:                          2rem
-                    font-weight:                        bold
-                p
-                    line-height:                        1.7rem
-                    color:                              rgba(0,0,0,0.6)
-                h1, p
-                    margin-bottom:                      30px
-                button
-                    margin-right:                       20px
-                    padding:                            10px 0px
-                    border:                             none
-                    background:                         none
-                    color:                              $primarycolor
-                    font-size:                          1rem
-
+            
 
 .eyowo-application
     padding:                                        50px 0px
@@ -390,27 +351,16 @@ header.home
             grid-template-columns:                      1fr
 
 
+
 .is-unique
     padding-top:                                    70px
-    padding-bottom:                                 200px
+    padding-bottom:                                 50px
     .eyowo-is-unique
-        background-position:                        center center
-        background-size:                            cover
-        background-repeat:                          no-repeat
-        width:                                      550px
-        height:                                     350px
-        position:                                   relative
         border-radius:                              5px
-        box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
-        float:                                      right
         .unique-content
-            width:                                  600px
-            position:                               absolute
-            top:                                    130px
-            left:                                   -450px
+            
             background:                             #fcfcfc
             padding:                                30px 50px
-            box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
             border-radius:                          5px
             h1
                 font-size:                          2rem
@@ -432,37 +382,11 @@ header.home
 
 @media screen and (max-width: 1030px)
     .is-unique
-        padding-bottom:                                 50px
+        .grid-2-cols
+            grid-template-columns:                  1fr
         .eyowo-is-unique
-            width:                                      100%
-            height:                                     550px
-            position:                                   relative
-            border-radius:                              5px
-            box-shadow:                                 0px 1px 12px 0px rgba(0,0,0,0.1)
             .unique-content
-                width:                                  100%
-                position:                               absolute
-                top:                                    70px
-                left:                                   0px
-                background:                             #fcfcfc
                 padding:                                30px 30px
-                box-shadow:                             0px 1px 12px 0px rgba(0,0,0,0.1)
-                border-radius:                          5px
-                h1
-                    font-size:                          2rem
-                    font-weight:                        bold
-                p
-                    line-height:                        1.7rem
-                    color:                              rgba(0,0,0,0.6)
-                h1, p
-                    margin-bottom:                      30px
-                button
-                    margin-right:                       20px
-                    padding:                            10px 0px
-                    border:                             none
-                    background:                         none
-                    color:                              $primarycolor
-                    font-size:                          1rem
 
 
 
